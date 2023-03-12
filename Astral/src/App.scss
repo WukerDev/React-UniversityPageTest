@@ -1,7 +1,4 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -43,4 +40,24 @@
 
 h1{
   font-size: 5rem;
+}
+
+$kolorek: #646cff;
+$kolorek-hover: #fff;
+.kolorek{
+  font-size: 5em;
+  font-weight: 700;
+  color: $kolorek;
+  transition: color .4s, transform .4s ease-in-out;
+  transform: scale(1);
+  user-select: none;
+  &:hover{
+    color: $kolorek-hover;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  &:focus-visible{
+    outline: 2px dashed white;
+    border: transparent;
+  }
 }

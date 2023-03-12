@@ -3,12 +3,19 @@ import './App.scss'
 import { useState } from 'react'
 import { useEffect } from 'react'
 
-function NapiszImie(props: any){
-  return(
+import Imiona from './Components/BazaImion'
+
+//NAVBAR
+import Test from './Components/Nav'
+import Test2 from './Components/Footer'
+
+function NapiszImie(props: any) {
+  return (
     <>
-      <h1>Witaj, jestem {props.imie}, mam {props.wiek} lata.</h1>
-      <h1>Witaj, jestem {props.imie}, mam {props.wiek} lata.</h1>
-      <h1>Witaj, jestem {props.imie}, mam {props.wiek} lata.</h1>
+      <div className='border-blue-600 border-2 p-10 pb-0'>
+        <h1 className="p-3">Witaj, jestem {props.imie}, mam {props.wiek} lat.</h1>
+        <h2 className="pb-0">{props.info}</h2>
+      </div>
     </>
   )
 }
@@ -21,9 +28,14 @@ function App() {
   });
   return (
     <>
-      <div>
-        <h1 onClick={increment}>{count}</h1>
-        <NapiszImie imie={'Kuba'} wiek={22}/>
+    <div className="flex flex-col h-screen justify-between">
+        <Test />
+        <div className="grid sm:grid-cols-3 gap-3 m-5">
+          {Imiona.map((imie: any) => (
+            <NapiszImie imie={imie.imie} wiek={imie.wiek} info={imie.info} />
+          ))}
+        </div>
+        <Test2 />
       </div>
     </>
   )
