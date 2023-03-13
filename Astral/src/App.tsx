@@ -1,5 +1,4 @@
 import './App.scss'
-
 import Root from './routes/root'
 import ErrorPage from './routes/error-page';
 import Contact from './routes/contact';
