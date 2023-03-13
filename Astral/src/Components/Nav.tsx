@@ -1,4 +1,5 @@
 import { Fragment } from 'react'
+import { useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
@@ -14,6 +15,15 @@ function classNames(...classes: any[]) {
 }
 
 export default function Test() {
+const [picture, setPicture] = useState('https://www.w3schools.com/howto/img_avatar.png');
+const pictures = ['https://www.w3schools.com/howto/img_avatar.png', 'https://www.w3schools.com/howto/img_avatar2.png'];
+function togglePicture(){
+  if (picture === pictures[0]){
+    setPicture(pictures[1]);
+  } else {
+    setPicture(pictures[0]);
+  }
+}
   return (
     <Disclosure as="nav" className="bg-gray-800 sticky top-0">
       {({ open }) => (
@@ -76,9 +86,9 @@ export default function Test() {
                   <div>
                     <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open user menu</span>
-                      <img
+                      <img onClick={() => togglePicture()}
                         className="h-8 w-8 rounded-full"
-                        src="https://www.w3schools.com/howto/img_avatar.png"
+                        src={picture}
                         alt=""
                       />
                     </Menu.Button>

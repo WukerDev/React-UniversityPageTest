@@ -1,7 +1,7 @@
 let Imiona = [
     {
         "id": 1,
-        "imie": "Kubaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "imie": "Kuba",
         "info": "Kuba jest najlepszy",
         "wiek": 21
     },
