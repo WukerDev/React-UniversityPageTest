@@ -13,7 +13,7 @@ function getYear() {
 export default function Footer() {
     return (    
         
-<footer className="bg-blue-800 dark:bg-gray-800 pb-2">
+<footer className="bg-blue-800 dark:bg-slate-900 pb-2">
 <div className="flex gap-2 align-middle justify-center pt-2" > 
     <a href="https://www.facebook.com/ukwbydgoszcz" target="_blank" className="foot_color ease-in-out transform hover:scale-125 transition duration-500"><img src={facebooklogo} /></a>
     <a href="https://www.instagram.com/ukwbydgoszcz" target="_blank" className="foot_color ease-in-out transform hover:scale-125 transition duration-500"><img src={instagramlogo} className=""/></a>

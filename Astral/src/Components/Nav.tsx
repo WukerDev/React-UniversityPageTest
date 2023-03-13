@@ -25,7 +25,7 @@ function togglePicture(){
   }
 }
   return (
-    <Disclosure as="nav" className="bg-blue-800 dark:bg-gray-800 sticky top-0">
+    <Disclosure as="nav" className="bg-blue-800 dark:bg-slate-900 sticky top-0">
       {({ open }) => (
         <>
           <div className="mx-auto px-2 sm:px-6 lg:px-8">
@@ -61,7 +61,7 @@ function togglePicture(){
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'dark:bg-gray-900 bg-blue-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          item.current ? 'dark:bg-slate-800 bg-blue-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                           'rounded-md px-3 py-2 text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
@@ -75,7 +75,7 @@ function togglePicture(){
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
                   type="button"
-                  className="rounded-full bg-blue-800 dark:bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="rounded-full bg-blue-800 dark:bg-slate-900 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
@@ -102,12 +102,12 @@ function togglePicture(){
                     leaveFrom="transform opacity-100 scale-100"
                     leaveTo="transform opacity-0 scale-95"
                   >
-                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white dark:bg-slate-800 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                       <Menu.Item>
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(active ? 'bg-gray-100 dark:bg-slate-900' : '', 'block px-4 py-2 text-sm text-slate-800 dark:text-slate-50')}
                           >
                             Your Profile
                           </a>
@@ -117,7 +117,7 @@ function togglePicture(){
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(active ? 'bg-gray-100 dark:bg-slate-900' : '', 'block px-4 py-2 text-sm text-slate-800 dark:text-slate-50')}
                           >
                             Settings
                           </a>
@@ -127,7 +127,7 @@ function togglePicture(){
                         {({ active }) => (
                           <a
                             href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                            className={classNames(active ? 'bg-gray-100 dark:bg-slate-900' : '', 'block px-4 py-2 text-sm text-slate-800 dark:text-slate-50')}
                           >
                             Sign out
                           </a>
