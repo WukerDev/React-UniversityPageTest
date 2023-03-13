@@ -10,10 +10,10 @@ function getYear() {
     return new Date().getFullYear();
 }
 
-export default function Test2() {
+export default function Footer() {
     return (    
         
-<footer className="bg-gradient-to-l from-blue-900 via-blue-800 to-blue-900 pb-2">
+<footer className="bg-blue-800 dark:bg-gray-800 pb-2">
 <div className="flex gap-2 align-middle justify-center pt-2" > 
     <a href="https://www.facebook.com/ukwbydgoszcz" target="_blank" className="foot_color ease-in-out transform hover:scale-125 transition duration-500"><img src={facebooklogo} /></a>
     <a href="https://www.instagram.com/ukwbydgoszcz" target="_blank" className="foot_color ease-in-out transform hover:scale-125 transition duration-500"><img src={instagramlogo} className=""/></a>
@@ -21,7 +21,7 @@ export default function Test2() {
     <a href="https://www.linkedin.com/school/uniwersytet-kazimierza-wielkiego/?originalSubdomain=pl" target="_blank" className="foot_color ease-in-out transform hover:scale-125 transition duration-500"><img src={linkedinlogo} className=""/></a>
     <a href="https://www.youtube.com/ukwbydgoszcz" target="_blank" className="foot_color ease-in-out transform hover:scale-125 transition duration-500"><img src={youtubelogo} className=""/></a>
 </div>
-<a className="">©{getYear()} Uniwersytet Kazimierza Wielkiego</a>  
+<a className="text-white">©{getYear()} Uniwersytet Kazimierza Wielkiego</a>  
 </footer>
     )
 }

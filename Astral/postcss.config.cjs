@@ -3,4 +3,5 @@ module.exports = {
     tailwindcss: {},
     autoprefixer: {},
   },
+  darkMode: 'class',
 }

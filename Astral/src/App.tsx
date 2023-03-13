@@ -5,12 +5,11 @@ import { useEffect } from 'react'
 import { createRoot } from 'react-dom/client'
 
 import React from 'react'
-
 import Imiona from './Components/BazaImion'
 
 //NAVBAR
 import Test from './Components/Nav'
-import Test2 from './Components/Footer/Footer'
+import Footer from './Components/Footer/Footer'
 
 function NapiszImie(props: any) {
   return (
@@ -22,8 +21,17 @@ function NapiszImie(props: any) {
     </>
   )
 }
-
 function App() {
+  //TODO: Dodanie funkcji zmiany motywu do przycisku
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+  localStorage.theme = 'light'
+  localStorage.theme = 'dark'
+  localStorage.removeItem('theme')
+  //
   const [count, setCount] = useState(0);
   const increment = () => setCount(count + 1);
   useEffect(() => {
@@ -31,6 +39,7 @@ function App() {
   });
   return (
     <>
+    
     <div className="flex flex-col h-screen justify-between">
         <Test />
         <h1 id='clockroot'>   
@@ -40,7 +49,7 @@ function App() {
             <NapiszImie key={imie.id} imie={imie.imie} wiek={imie.wiek} info={imie.info} />
           ))}
         </div>
-        <Test2 />
+        <Footer />
       </div>
     </>
   )

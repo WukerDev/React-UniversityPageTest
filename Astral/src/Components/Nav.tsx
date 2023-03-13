@@ -25,7 +25,7 @@ function togglePicture(){
   }
 }
   return (
-    <Disclosure as="nav" className="bg-gray-800 sticky top-0">
+    <Disclosure as="nav" className="bg-blue-800 dark:bg-gray-800 sticky top-0">
       {({ open }) => (
         <>
           <div className="mx-auto px-2 sm:px-6 lg:px-8">
