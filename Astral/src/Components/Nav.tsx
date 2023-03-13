@@ -78,7 +78,7 @@ export default function Test() {
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
-                        src="http://oldimis.ukw.edu.pl/imsis/pliki/kotlarz.jpg"
+                        src="https://www.w3schools.com/howto/img_avatar.png"
                         alt=""
                       />
                     </Menu.Button>

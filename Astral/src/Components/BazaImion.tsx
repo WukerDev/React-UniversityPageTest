@@ -1,14 +1,14 @@
 let Imiona = [
     {
         "id": 1,
-        "imie": "Kuba",
+        "imie": "Kubaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
         "info": "Kuba jest najlepszy",
         "wiek": 21
     },
     {
         "id": 2,
         "imie": "Wiktor",
-        "info": "Wiktor jest najlepszy",
+        "info": "Wiktor jest najlepszay",
         "wiek": 20
     },
     {

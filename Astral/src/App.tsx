@@ -12,9 +12,9 @@ import Test2 from './Components/Footer'
 function NapiszImie(props: any) {
   return (
     <>
-      <div className='border-blue-600 border-2  pb-0'>
-        <h1 className="p-3">Witaj, jestem {props.imie}, mam {props.wiek} lat.</h1>
-        <h2 className="pb-0">{props.info}</h2>
+      <div className='border-gray-600 border-2 pb-0 break-words'>
+        <h1 className="p-6">Witaj, jestem {props.imie}, mam {props.wiek} lat.</h1>
+        <h2 className="p-2 border-gray-600 border-t-2">{props.info}</h2>
       </div>
     </>
   )
