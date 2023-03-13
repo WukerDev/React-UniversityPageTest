@@ -23,7 +23,7 @@ export default function Footer() {
 {/*Automatic icon generator*/}
 {/*Aby dodać nowe ikony dodaj je w pliku ikony_baza.tsx*/}
     {IkonyFooter.map((ikona: any) => (
-        <a href={ikona.href} target="_blank" className={styleIcon}>
+        <a key={ikona.id} href={ikona.href} target="_blank" className={styleIcon}>
             <img className={styleIconColor} src={ikona.icon} /></a>))}</div>
 {/*Copyright notice, z automatycznym update roku*/}
 <a className="text-gray-400">©{getYear()} Uniwersytet Kazimierza Wielkiego</a>  
