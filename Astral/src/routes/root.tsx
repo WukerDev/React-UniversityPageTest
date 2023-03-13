@@ -1,4 +1,4 @@
-import Test from '../Components/Nav'
+import Test from '../Components/Nav/Nav'
 import Footer from '../Components/Footer/Footer'
 import Imiona from '../Components/BazaImion'
 import { useEffect, useState } from 'react'
