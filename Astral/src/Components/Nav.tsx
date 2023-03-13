@@ -2,6 +2,7 @@ import { Fragment } from 'react'
 import { useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
+import ukwlogo from '../ukw.svg'
 
 //liczba notyfikacji, backend do napisania TODO:
   let NotifyAmmoun = 5;
@@ -47,13 +48,13 @@ function togglePicture(){
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="block h-8 w-auto lg:hidden"
-                    src="https://www.ukw.edu.pl/img/ukw-herb.svg"
+                    className="block h-8 w-auto lg:hidden bg-white rounded-full p-0.5"
+                    src={ukwlogo}
                     alt="Your Company"
                   />
                   <img
-                    className="hidden h-8 w-auto lg:block"
-                    src="https://www.ukw.edu.pl/img/ukw-herb.svg"
+                    className="hidden h-8 w-auto lg:block bg-white  rounded-full p-0.5"
+                    src={ukwlogo}
                     alt="Your Company"
                   />
                 </div>
@@ -92,7 +93,7 @@ function togglePicture(){
                     <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open user menu</span>
                       <img onClick={() => togglePicture()}
-                        className="h-8 w-8 rounded-full"
+                        className="h-8 w-8 rounded-full" 
                         src={picture}
                         alt=""
                       />
