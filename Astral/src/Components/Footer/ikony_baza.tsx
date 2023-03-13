@@ -1,4 +1,13 @@
-
+/*
+Aby dodać nowe ikony, dodaj je niżej w IkonyFooter
+PrzykłqdW:
+    {
+        "id": kolejny numer,
+        "title": "Alias",
+        "href": "Link do strony",
+        "icon": "Ścieżka do ikony",
+    },
+*/
 let IkonyFooter = [
     {
         "id": 1,
@@ -31,4 +40,5 @@ let IkonyFooter = [
         "icon": "./src/Components/Footer/iconmonstr-youtube-10.svg",
     },
 ]
+//export ikon do Footer.tsx
 export default IkonyFooter;
