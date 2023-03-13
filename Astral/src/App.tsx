@@ -8,8 +8,13 @@ import React from 'react'
 import Imiona from './Components/BazaImion'
 
 //NAVBAR
-import Test from './Components/Nav'
+import NavBar from './Components/Nav/Nav'
 import Footer from './Components/Footer/Footer'
+import currentTab from './Components/Nav/Nav'
+
+
+
+
 
 function NapiszImie(props: any) {
   return (
@@ -34,7 +39,7 @@ function App() {
     <>
     
     <div className="flex flex-col h-screen justify-between bg-gray-200 dark:bg-black">
-        <Test />
+        <NavBar />
         <h1 id='clockroot'>   
         </h1>
         <div className="grid sm:grid-cols-3 gap-3 m-5">
