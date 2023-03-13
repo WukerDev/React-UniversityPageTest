@@ -21,7 +21,7 @@ export default function Footer() {
     <a href="https://www.linkedin.com/school/uniwersytet-kazimierza-wielkiego/?originalSubdomain=pl" target="_blank" className="foot_color ease-in-out transform hover:scale-125 transition duration-500"><img src={linkedinlogo} className=""/></a>
     <a href="https://www.youtube.com/ukwbydgoszcz" target="_blank" className="foot_color ease-in-out transform hover:scale-125 transition duration-500"><img src={youtubelogo} className=""/></a>
 </div>
-<a className="text-white">©{getYear()} Uniwersytet Kazimierza Wielkiego</a>  
+<a className="text-gray-400">©{getYear()} Uniwersytet Kazimierza Wielkiego</a>  
 </footer>
     )
 }
