@@ -10,8 +10,7 @@ import Imiona from './Components/BazaImion'
 
 //NAVBAR
 import Test from './Components/Nav'
-import Test2 from './Components/Footer'
-import ReactDOM from 'react-dom'
+import Test2 from './Components/Footer/Footer'
 
 function NapiszImie(props: any) {
   return (
