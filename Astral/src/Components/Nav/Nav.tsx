@@ -5,6 +5,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import ukwlogo from './ukw.svg'
 import { Link } from 'react-router-dom' 
 
+
 //liczba notyfikacji, backend do napisania TODO:
 let NotifyAmmoun = 5;
 //aby dodawać nowe zakładki, dodaj je w tablicy navigation
@@ -28,6 +29,12 @@ var SchoolName = "Uniwersytet Kazimierza Wielkiego"
 function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(' ')
 }
+
+const refreshPage = ()=>{
+  window.location.reload();
+}
+
+
 
 export default function NavBar() {
 
@@ -62,18 +69,22 @@ function togglePicture(){
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
-                    {navigation.map((item) => (
+                   {navigation.map((item) => (
+                    /* BUG: Temporary FIX */
+                    <a onClick={refreshPage}>
                       <Link
+                      className={classNames(
+                        item.href === window.location.pathname ? 'dark:bg-slate-800 bg-blue-800 text-white' : 'text-gray-300 hover:dark:bg-gray-700 hover:bg-blue-800 hover:text-white',
+                        'rounded-md px-3 py-2 text-sm font-medium'
+                      )}
+                      aria-current={item.href === window.location.pathname ? 'page' : undefined}
                         key={item.name}
-                        to={item.href}
-                        className={classNames(
-                          item.href === window.location.pathname ? 'dark:bg-slate-800 bg-blue-800 text-white' : 'text-gray-300 hover:dark:bg-gray-700 hover:bg-blue-800 hover:text-white',
-                          'rounded-md px-3 py-2 text-sm font-medium'
-                        )}
-                        aria-current={item.href === window.location.pathname ? 'page' : undefined}
+                        to={item.href} 
+                       
                       >
                         {item.name}
                       </Link>
+                      </a>  
                     ))}
                   </div>
                 </div>
@@ -114,7 +125,7 @@ function togglePicture(){
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
+                            href="#" 
                             className={classNames(active ? 'bg-gray-100 dark:bg-slate-900' : '', 'block px-4 py-2 text-sm text-slate-800 dark:text-slate-50')}
                           >
                             Twój Profil
