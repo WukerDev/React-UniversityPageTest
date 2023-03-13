@@ -1,8 +1,8 @@
 .foot_color{ 
-    img{
+    img{ //stosowany tylko na obrazach w footerze
       filter: invert(73%) sepia(7%) saturate(480%) hue-rotate(179deg) brightness(89%) contrast(86%);
+      //Zmiana koloru na biały
     }
   }
-
 
  
