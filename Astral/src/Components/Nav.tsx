@@ -87,7 +87,7 @@ function togglePicture(){
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
 
-                {/* Profile dropdown */}
+                {/* Profile dropdown TODO:Podział na loged i not loged*/}
                 <Menu as="div" className="relative ml-3">
                   <div>
                     <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
@@ -115,7 +115,7 @@ function togglePicture(){
                             href="#"
                             className={classNames(active ? 'bg-gray-100 dark:bg-slate-900' : '', 'block px-4 py-2 text-sm text-slate-800 dark:text-slate-50')}
                           >
-                            Your Profile
+                            Twój Profil
                           </a>
                         )}
                       </Menu.Item>
@@ -125,7 +125,7 @@ function togglePicture(){
                             href="#"
                             className={classNames(active ? 'bg-gray-100 dark:bg-slate-900' : '', 'block px-4 py-2 text-sm text-slate-800 dark:text-slate-50')}
                           >
-                            Settings
+                            Harmonogram
                           </a>
                         )}
                       </Menu.Item>
@@ -135,7 +135,27 @@ function togglePicture(){
                             href="#"
                             className={classNames(active ? 'bg-gray-100 dark:bg-slate-900' : '', 'block px-4 py-2 text-sm text-slate-800 dark:text-slate-50')}
                           >
-                            Sign out
+                            Ustawienia
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="#"
+                            className={classNames(active ? 'bg-gray-100 dark:bg-slate-900' : '', 'block px-4 py-2 text-sm text-slate-800 dark:text-slate-50')}
+                          >
+                            Panel Administratora
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="#"
+                            className={classNames(active ? 'bg-gray-100 dark:bg-slate-900' : '', 'block px-4 py-2 text-sm text-slate-800 dark:text-slate-50')}
+                          >
+                            Wyloguj
                           </a>
                         )}
                       </Menu.Item>
