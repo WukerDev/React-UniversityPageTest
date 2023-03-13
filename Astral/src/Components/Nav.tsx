@@ -4,10 +4,10 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'Główna', href: '/', current: true },
+  { name: 'Galeria', href: '/Galeria', current: false },
+  { name: 'Kontakt', href: '/Kontakt', current: false },
+  { name: 'FAQ', href: '/FAQ', current: false },
 ]
 
 function classNames(...classes: any[]) {
@@ -75,7 +75,7 @@ function togglePicture(){
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
                   type="button"
-                  className="rounded-full bg-blue-800 dark:bg-slate-900 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="rounded-full bg-blue-800 dark:bg-slate-900 p-1 text-gray-400 hover:text-white focus:outline-none hover:animate-pulse hover:transition focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
