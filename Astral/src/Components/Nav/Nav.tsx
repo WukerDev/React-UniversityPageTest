@@ -20,9 +20,10 @@ const navigation = [
 var StyleNavDisclosure = "bg-blue-900 dark:bg-slate-900 sticky top-0"
 var StyleNavDisclosureButton = "inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
 var StyleNavDisclosureIcon = "block h-6 w-6"
-var StyleNavDisclosureLogo = "block h-8 w-auto lg:hidden bg-white rounded-full p-0.5"
+var StyleNavDisclosureLogo = "block h-8 w-auto lg:block bg-white rounded-full p-0.5 hover:animate-spin"
 var StyleNavDisclosureMenuButton = "flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
 var StyleNavDisclosureMenuItems = "absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white dark:bg-slate-800 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+var SchoolName = "Uniwersytet Kazimierza Wielkiego"
 
 function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(' ')
@@ -57,8 +58,7 @@ function togglePicture(){
                 </Disclosure.Button> </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <img className={StyleNavDisclosureLogo} src={ukwlogo} alt="Uniwersytet Kazimierza Wielkiego" />
-                  <img className={StyleNavDisclosureLogo} src={ukwlogo} alt="Uniwersytet Kazimierza Wielkieg" />
+                  <img className={StyleNavDisclosureLogo} src={ukwlogo} alt={SchoolName} />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
@@ -67,7 +67,7 @@ function togglePicture(){
                         key={item.name}
                         to={item.href}
                         className={classNames(
-                          item.href === window.location.pathname ? 'dark:bg-slate-800 bg-blue-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          item.href === window.location.pathname ? 'dark:bg-slate-800 bg-blue-800 text-white' : 'text-gray-300 hover:dark:bg-gray-700 hover:bg-blue-800 hover:text-white',
                           'rounded-md px-3 py-2 text-sm font-medium'
                         )}
                         aria-current={item.href === window.location.pathname ? 'page' : undefined}
