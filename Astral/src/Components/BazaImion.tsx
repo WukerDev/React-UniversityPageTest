@@ -8,7 +8,7 @@ let Imiona = [
     {
         "id": 2,
         "imie": "Wiktor",
-        "info": "Wiktor jest najlepszay",
+        "info": "Wiktor jest najgorszy",
         "wiek": 20
     },
     {
