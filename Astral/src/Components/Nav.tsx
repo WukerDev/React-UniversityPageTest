@@ -75,8 +75,9 @@ function togglePicture(){
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
                   type="button"
-                  className="rounded-full bg-blue-900 dark:bg-slate-900 p-1 text-gray-400 hover:text-white focus:outline-none hover:animate-pulse hover:transition focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="rounded-full bg-blue-900 dark:bg-slate-900 p-1 text-gray-400 hover:text-white focus:outline-none hover:transition focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
+                  <span className="absolute -mt-2.5  rounded-full animate-pulse bg-red-700 py-0 px-1.5 text-xs text-white">1</span>
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
