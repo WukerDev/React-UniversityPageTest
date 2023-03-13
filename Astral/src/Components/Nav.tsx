@@ -25,7 +25,7 @@ function togglePicture(){
   }
 }
   return (
-    <Disclosure as="nav" className="bg-blue-800 dark:bg-slate-900 sticky top-0">
+    <Disclosure as="nav" className="bg-blue-900 dark:bg-slate-900 sticky top-0">
       {({ open }) => (
         <>
           <div className="mx-auto px-2 sm:px-6 lg:px-8">
@@ -75,7 +75,7 @@ function togglePicture(){
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
                   type="button"
-                  className="rounded-full bg-blue-800 dark:bg-slate-900 p-1 text-gray-400 hover:text-white focus:outline-none hover:animate-pulse hover:transition focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="rounded-full bg-blue-900 dark:bg-slate-900 p-1 text-gray-400 hover:text-white focus:outline-none hover:animate-pulse hover:transition focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
@@ -148,7 +148,7 @@ function togglePicture(){
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'dark:bg-gray-900 bg-blue-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    item.current ? 'dark:bg-gray-900 bg-blue-800 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                     'block rounded-md px-3 py-2 text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}

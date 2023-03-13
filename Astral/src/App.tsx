@@ -40,7 +40,7 @@ function App() {
   return (
     <>
     
-    <div className="flex flex-col h-screen justify-between">
+    <div className="flex flex-col h-screen justify-between bg-gray-200 dark:bg-black">
         <Test />
         <h1 id='clockroot'>   
         </h1>
