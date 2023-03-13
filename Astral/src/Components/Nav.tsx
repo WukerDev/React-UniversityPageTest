@@ -3,6 +3,9 @@ import { useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
+//liczba notyfikacji, backend do napisania TODO:
+  let NotifyAmmoun = 5;
+
 const navigation = [
   { name: 'Główna', href: '/', current: true },
   { name: 'Galeria', href: '/Galeria', current: false },
@@ -77,7 +80,8 @@ function togglePicture(){
                   type="button"
                   className="rounded-full bg-blue-900 dark:bg-slate-900 p-1 text-gray-400 hover:text-white focus:outline-none hover:transition focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                 >
-                  <span className="absolute -mt-2.5  rounded-full animate-pulse bg-red-700 py-0 px-1.5 text-xs text-white">1</span>
+                  {/* Ikona z liczbą notyfikacji TODO: Dodać backend*/}
+                  <span className="absolute -mt-1.5  rounded-full animate-pulse bg-red-700 py-0 px-1.5 text-xs text-white">{NotifyAmmoun}</span>
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
@@ -149,7 +153,7 @@ function togglePicture(){
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'dark:bg-gray-900 bg-blue-800 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    item.current ? 'dark:bg-gray-800 bg-blue-800 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                     'block rounded-md px-3 py-2 text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
