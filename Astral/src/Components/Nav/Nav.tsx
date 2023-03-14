@@ -6,6 +6,7 @@ import ukwlogo from './ukw.svg'
 import { Link } from 'react-router-dom' 
 import NavData from './NavData'
 import MenuData from './MenuData'
+import Notifications from './NotificationsData'
 //liczba notyfikacji, backend do napisania TODO:
 let NotifyAmmoun = 5;
 //aby dodawać nowe zakładki, dodaj je w tablicy navData
@@ -23,6 +24,7 @@ function classNames(...classes: any[]) {
 const refreshPage = ()=>{
   window.location.reload();}
 export default function NavBar() {
+const [isOpened, setIsOpened] = useState(false);
 const [picture, setPicture] = useState('https://www.w3schools.com/howto/img_avatar.png');
 const pictures = ['https://www.w3schools.com/howto/img_avatar.png', 'https://www.w3schools.com/howto/img_avatar2.png'];
 function togglePicture(){
@@ -31,11 +33,6 @@ function togglePicture(){
   } else {
     setPicture(pictures[0]);}}
 
-    function togglePicture2(){
-      if (picture === pictures[0]){
-        setPicture(pictures[1]);
-      } else {
-        setPicture(pictures[0]);}}
 
 
   return (
@@ -65,15 +62,26 @@ function togglePicture(){
                         key={item.name}  to={item.href} >
                         {item.name}
                       </Link></a>))}</div></div></div>
+              
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                <button
-                  type="button"
-                  className="rounded-full bg-blue-900 dark:bg-slate-900 p-1 text-gray-400 hover:text-white focus:outline-none hover:transition focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                  {/* Ikona z liczbą notyfikacji TODO: Dodać backend*/}
+              <Menu as="div" className="relative ml-3">
+              <Menu.Button className="rounded-full bg-blue-900 dark:bg-slate-900 p-1 text-gray-400 hover:text-white focus:outline-none hover:transition focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                {/* Ikona z liczbą notyfikacji TODO: Dodać backend*/}
                   <span className="absolute -mt-1.5  rounded-full animate-pulse bg-red-700 py-0 px-1.5 text-xs text-white">{NotifyAmmoun}</span>
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
+                </Menu.Button>
+                <Transition  as={Fragment}  enter="transition ease-out duration-100"  enterFrom="transform opacity-0 scale-95"  enterTo="transform opacity-100 scale-100">
+                  <Menu.Items className="p-2 absolute right-0 z-10 mt-2 w-64 origin-top-right rounded-md bg-white dark:bg-slate-800 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  {Notifications.map((item) => (
+                  <Menu.Item><div className="dark:bg-slate-900 bg-gray-400 mb-2 mt-2 py-2 rounded-xl">
+                    <div className="flex-row">
+                      <p className="text-sky-400 text-xs" >{item.dateTime}</p>
+                      <p className="text-sky-400 text-xs" >{item.sender}</p>
+                      <p className="  text-center text-sm">{item.message}</p></div>
+                      </div></Menu.Item>))}
+                    </Menu.Items>
+                </Transition></Menu>
                 {/* Profile dropdown TODO:Podział na loged i not loged*/}
                 <Menu as="div" className="relative ml-3">
                   <div>
