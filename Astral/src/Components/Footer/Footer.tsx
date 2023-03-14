@@ -10,7 +10,7 @@ var stylefoot = "bg-blue-900 dark:bg-slate-900 pb-2"
 //ikony div
 var styleIconDiv = "flex gap-2 align-middle justify-center pt-2"
 //ikony
-var styleIcon = "foot_color ease-in-out transform hover:scale-125 transition duration-500"
+var styleIcon = "foot_color ease-in-out transform hover:scale-125 transition duration-300"
 //kolor ikon
 var styleIconColor = "foot_color" // aby edytować kolor ikon, edytuj klasę w pliku Footer.scss
 //export funkcji do App.tsx, przy zmianie nazwy pamiętać o tym samym w App.tsx
