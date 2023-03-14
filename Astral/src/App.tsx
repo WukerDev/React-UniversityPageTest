@@ -5,6 +5,13 @@ import Contact from './routes/contact';
 import Home from './routes/home';
 import Gallery from './routes/gallery';
 import Faq from './routes/faq';
+import Admin from './routes/admin';
+import Login from './routes/login';
+import Logout from './routes/logout';
+import Planner from './routes/planner';
+import Profile from './routes/profile';
+import Settings from './routes/settings';
+
 
 //NAVBAR
 import NavBar from './Components/Nav/Nav'
@@ -21,9 +28,15 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />} errorElement={<ErrorPage />}>,
       <Route index element={<Home />} />,
-      <Route path="/Kontakt" element={<Contact />} />
-      <Route path="/Galeria" element={<Gallery />} />
+      <Route path="/Contact" element={<Contact />} />
+      <Route path="/Gallery" element={<Gallery />} />
+      <Route path="/Admin" element={<Admin />} />
       <Route path="/FAQ" element={<Faq />} />
+      <Route path="/Login" element={<Login />} />
+      <Route path="/Logout" element={<Logout />} />
+      <Route path="/Planner" element={<Planner />} />
+      <Route path="/Profile" element={<Profile />} />
+      <Route path="/Settings" element={<Settings />} />
     </Route>
   )
 );
