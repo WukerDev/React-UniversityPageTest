@@ -30,6 +30,14 @@ function togglePicture(){
     setPicture(pictures[1]);
   } else {
     setPicture(pictures[0]);}}
+
+    function togglePicture2(){
+      if (picture === pictures[0]){
+        setPicture(pictures[1]);
+      } else {
+        setPicture(pictures[0]);}}
+
+
   return (
     <Disclosure as="nav" className={StyleNavDisclosure}>
       {({ open }) => ( <>
