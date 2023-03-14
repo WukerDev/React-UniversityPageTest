@@ -4,19 +4,12 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import ukwlogo from './ukw.svg'
 import { Link } from 'react-router-dom' 
-
+import NavData from './NavData'
+import MenuData from './NavData'
 
 //liczba notyfikacji, backend do napisania TODO:
 let NotifyAmmoun = 5;
-//aby dodawać nowe zakładki, dodaj je w tablicy navigation
-const navigation = [
-    //dodawać nowe zakładki w formacie { name: 'nazwa zakładki', href: 'link do zakładki' },
-    { name: 'Główna', href: '/' },
-    { name: 'Galeria', href: '/Galeria' },
-    { name: 'Kontakt', href: '/Kontakt'  },
-    { name: 'FAQ', href: '/FAQ'  },
-    //href jest też wykorzystywane do określenia wartości current trochę niżej, zmieniając href, zmienia się też current
-  ]
+//aby dodawać nowe zakładki, dodaj je w tablicy navData
 //STYLES CONFIG tutaj edytujemy style navbara poprzez dodawanie klas
 var StyleNavDisclosure = "bg-blue-900 dark:bg-slate-900 sticky top-0"
 var StyleNavDisclosureButton = "inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
@@ -25,7 +18,7 @@ var StyleNavDisclosureLogo = "block h-8 w-auto lg:block bg-white rounded-full p-
 var StyleNavDisclosureMenuButton = "flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
 var StyleNavDisclosureMenuItems = "absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white dark:bg-slate-800 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
 var SchoolName = "Uniwersytet Kazimierza Wielkiego"
-
+var MenuItemActive = "bg-gray-100 dark:bg-slate-900"
 function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(' ')
 }
@@ -69,7 +62,7 @@ function togglePicture(){
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
-                   {navigation.map((item) => (
+                   {NavData.map((item) => (
                     /* BUG: Temporary FIX */
                     <a onClick={refreshPage}>
                       <Link
@@ -122,56 +115,20 @@ function togglePicture(){
                     leaveTo="transform opacity-0 scale-95"
                   >
                     <Menu.Items className={StyleNavDisclosureMenuItems}>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#" 
-                            className={classNames(active ? 'bg-gray-100 dark:bg-slate-900' : '', 'block px-4 py-2 text-sm text-slate-800 dark:text-slate-50')}
-                          >
-                            Twój Profil
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100 dark:bg-slate-900' : '', 'block px-4 py-2 text-sm text-slate-800 dark:text-slate-50')}
-                          >
-                            Harmonogram
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100 dark:bg-slate-900' : '', 'block px-4 py-2 text-sm text-slate-800 dark:text-slate-50')}
-                          >
-                            Ustawienia
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100 dark:bg-slate-900' : '', 'block px-4 py-2 text-sm text-slate-800 dark:text-slate-50')}
-                          >
-                            Panel Administratora
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100 dark:bg-slate-900' : '', 'block px-4 py-2 text-sm text-slate-800 dark:text-slate-50')}
-                          >
-                            Wyloguj
-                          </a>
-                        )}
-                      </Menu.Item>
+                          {/* Automatic menu contnet generator*/}
+                          {/*BUG: Need fix*/}
+                          {MenuData.map((item) => (
+                     <Menu.Item>
+                     {({ active }) => (
+                       <a key={item.id}
+                         href={item.href}
+                         className={classNames(active ? "bg-gray-100 dark:bg-slate-900" : '', 'block px-4 py-2 text-sm text-slate-800 dark:text-slate-50')}
+                       >
+                         {item.name}
+                       </a> 
+                     )}
+                   </Menu.Item>
+                    ))}
                     </Menu.Items>
                   </Transition>
                 </Menu>
@@ -181,7 +138,7 @@ function togglePicture(){
 
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pt-2 pb-3">
-              {navigation.map((item) => (
+              {NavData.map((item) => (
                 <Disclosure.Button
                   key={item.name}
                   as="a"
