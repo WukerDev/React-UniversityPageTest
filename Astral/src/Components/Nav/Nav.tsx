@@ -67,20 +67,22 @@ function togglePicture(){
               <Menu as="div" className="relative ml-3">
               <Menu.Button className="rounded-full bg-blue-900 dark:bg-slate-900 p-1 text-gray-400 hover:text-white focus:outline-none hover:transition focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                 {/* Ikona z liczbą notyfikacji TODO: Dodać backend*/}
-                  <span className="absolute -mt-1.5  rounded-full animate-pulse bg-red-700 py-0 px-1.5 text-xs text-white">{NotifyAmmoun}</span>
+                  <span className="absolute -mt-1.5  rounded-full animate-pulse bg-red-700 py-0 px-1.5 text-xs text-white">{NotifyAmmoun}</span> {/*TODO: Dodać backend aby liczył powiadomienia */}
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
                 </Menu.Button>
                 <Transition  as={Fragment}  enter="transition ease-out duration-100"  enterFrom="transform opacity-0 scale-95"  enterTo="transform opacity-100 scale-100">
+                
                   <Menu.Items className="p-2 absolute right-0 z-10 mt-2 w-64 origin-top-right rounded-md bg-white dark:bg-slate-800 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  <div className="max-h-96 overflow-x-auto">
                   {Notifications.map((item) => (
-                  <Menu.Item><div className="dark:bg-slate-900 bg-gray-400 mb-2 mt-2 py-2 rounded-xl">
+                  <Menu.Item><div className="dark:bg-slate-900 bg-blue-500 mb-2 mt-2 py-2 rounded-xl">
                     <div className="flex-row">
-                      <p className="text-sky-400 text-xs" >{item.dateTime}</p>
-                      <p className="text-sky-400 text-xs" >{item.sender}</p>
+                      <p className="dark:text-sky-400 text-xs text-sky-200" >{item.dateTime}</p>
+                      <p className="dark:text-sky-400 text-xs text-sky-200" >{item.sender}</p>
                       <p className="  text-center text-sm">{item.message}</p></div>
                       </div></Menu.Item>))}
-                    </Menu.Items>
+                      </div></Menu.Items>
                 </Transition></Menu>
                 {/* Profile dropdown TODO:Podział na loged i not loged*/}
                 <Menu as="div" className="relative ml-3">
@@ -94,6 +96,7 @@ function togglePicture(){
                     <Menu.Items className={StyleNavDisclosureMenuItems}>
                           {/* Automatic menu contnet generator*/}
                           {/*BUG: Need fix*/}
+                      <Menu.Item></Menu.Item>
                           {MenuData.map((item) => (
                      <Menu.Item>
                      {({ active }) => (
