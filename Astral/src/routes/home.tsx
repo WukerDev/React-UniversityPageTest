@@ -4,9 +4,11 @@ export default function Home() {
   return (
     <>
       <div className="grid sm:grid-cols-3 gap-3 m-5">
-        {Imiona.map((imie: any) => (
+        {
+          Imiona.sort((a: any, b: any) => a.id - b.id).map((imie: any) => (
           <NapiszImie key={imie.id} imie={imie.imie} wiek={imie.wiek} info={imie.info} />
-        ))}
+        )
+        )}
       </div>
     </>
   )

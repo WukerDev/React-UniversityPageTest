@@ -17,6 +17,7 @@ export default function ErrorPage() {
         
       </p>
       
+      
       </div>
       <a href="/" className="text-xl border-red-700 border-l-8 mx-20 bg-red-100 py-2 dark:bg-zinc-700 dark:border-zinc-300">Powrót na stronę główną</a>
     </div>
