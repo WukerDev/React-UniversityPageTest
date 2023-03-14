@@ -5,7 +5,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import ukwlogo from './ukw.svg'
 import { Link } from 'react-router-dom' 
 import NavData from './NavData'
-import MenuData from './NavData'
+import MenuData from './MenuData'
 //liczba notyfikacji, backend do napisania TODO:
 let NotifyAmmoun = 5;
 //aby dodawać nowe zakładki, dodaj je w tablicy navData
