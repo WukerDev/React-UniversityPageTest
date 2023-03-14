@@ -48,7 +48,7 @@ function togglePicture(){
                   <div className="flex space-x-4">
                    {NavData.map((item) => (
                     /* BUG: Temporary FIX */
-                    <a onClick={refreshPage}>
+                    <a>
                       <Link
                       className={classNames(
                         item.href === window.location.pathname ? 'dark:bg-slate-800 bg-blue-800 text-white' : 'text-gray-300 hover:dark:bg-gray-700 hover:bg-blue-800 hover:text-white',

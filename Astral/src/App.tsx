@@ -3,6 +3,8 @@ import Root from './routes/root'
 import ErrorPage from './routes/error-page';
 import Contact from './routes/contact';
 import Home from './routes/home';
+import Gallery from './routes/gallery';
+import Faq from './routes/faq';
 
 //NAVBAR
 import NavBar from './Components/Nav/Nav'
@@ -20,6 +22,8 @@ const router = createBrowserRouter(
     <Route path="/" element={<Root />} errorElement={<ErrorPage />}>,
       <Route index element={<Home />} />,
       <Route path="/Kontakt" element={<Contact />} />
+      <Route path="/Galeria" element={<Gallery />} />
+      <Route path="/FAQ" element={<Faq />} />
     </Route>
   )
 );
