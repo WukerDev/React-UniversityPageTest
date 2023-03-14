@@ -10,9 +10,12 @@ export default function ErrorPage() {
       <pre>{error.message}</pre>
       <p>
         <i>{error.status} {error.statusText || error.message}</i>
-        <img src={ukw_eeror} />
+        
         {error.status === 404  ? null  : null}
+        
       </p>
+      <img src={ukw_eeror} />
+      <a href="/" className="text-4xl text-sky-500 hover:text-sky-800" >Powrót na stronę główną</a>
     </div>
   );
 }
