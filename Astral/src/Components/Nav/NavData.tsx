@@ -6,6 +6,5 @@ const NavData = [
     { id: 2, name: 'Galeria', href: '/Gallery' },
     { id: 3, name: 'Kontakt', href: '/Contact'  },
     { id: 4, name: 'FAQ', href: '/FAQ'  },
-    //href jest też wykorzystywane do określenia wartości current trochę niżej, zmieniając href, zmienia się też current
   ]
 export default NavData;

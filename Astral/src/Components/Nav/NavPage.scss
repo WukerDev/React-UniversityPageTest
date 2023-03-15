@@ -1,0 +1,6 @@
+.active{
+    font-weight: 800;
+    &:before{
+        content: '» ';
+    }
+}
