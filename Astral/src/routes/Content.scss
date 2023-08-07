@@ -1,3 +1,26 @@
 a{
     word-wrap: break-word;
 }
+ul{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    li{
+        margin: .2em;
+    }
+    img{
+        width: 50vw;
+        height: auto;
+
+
+        margin: .2em;
+    
+        border-radius: 0.5em;
+    }
+    @media screen and (max-width: 768px){
+        img{
+            width: 65vw;
+            align-self: center;
+        }
+    }
+}

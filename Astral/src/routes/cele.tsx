@@ -5,6 +5,8 @@ import cele3 from '../../public/liczOs1.png'
 import cele4 from '../../public/liczOs2.png'
 import cele5 from '../../public/cele5.png'
 
+import './Content.scss'
+
 
 
 export default function Cele() {
