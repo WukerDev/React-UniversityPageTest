@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './NewNav.scss'
-import logo from '../../../../public/ukw.svg'
+import logo from '/ukw.svg'
 import { Link } from 'react-router-dom';
 
 type CardProps = {

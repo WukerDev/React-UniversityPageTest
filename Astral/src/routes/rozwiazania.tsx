@@ -1,9 +1,10 @@
 import Imiona from "../Components/BazaImion"
-import podwozie1 from '../../public/podwozie1.png'
-import podwozie2 from '../../public/podwozie2.png'
-import przekładnia1 from '../../public/przekładnia1.png'
-import przekładnia2 from '../../public/przekładnia2.png'
-import regal from '../../public/regal.png'
+import podwozie1 from '/podwozie1.png'
+import podwozie2 from '/podwozie2.png'
+import przekładnia1 from '/przekładnia1.png'
+import przekładnia2 from '/przekładnia2.png'
+import regal from '/regal.png'
+import './Content.scss'
 
 export default function Rozwiazania() {
   return (

@@ -1,6 +1,6 @@
 import Imiona from "../Components/BazaImion"
-import orzel from '../../public/1.png'
-import logo from '../../public/2.png'
+import orzel from '/1.png'
+import logo from '/2.png'
 
 export default function Home() {
   return (
