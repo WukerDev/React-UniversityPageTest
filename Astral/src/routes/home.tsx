@@ -3,9 +3,19 @@ import Imiona from "../Components/BazaImion"
 export default function Home() {
   return (
     <>
-      <div className="text-5xl">
-        Strona główna
-      </div>
+       <div className="p-10">
+   
+      <p className="text-xl mt-10 mb-4">
+        Projekt: „Innowacyjny, mobilny system dezynfekcji sal dydaktycznych”
+      </p>
+      <p className="text-xl mb-4">
+        Realizacja projektu jest w 100% finansowana ze środków Ministerstwa Edukacji i Nauki. 
+        Budżet (ostateczny) projektu: 23 600 zł.
+        Środki te zostały pozyskane w ramach konkursu  „Studenckie koła naukowe tworzą innowacje ogłoszonego przez Ministra Edukacji i Nauki
+        Projekt realizowany na Wydziale Informatyki Uniwersytetu Kazimierza Wielkiego 
+        Rok akademicki 2022/2023
+      </p>
+    </div>
     </>
   )
 }
