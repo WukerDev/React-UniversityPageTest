@@ -39,6 +39,7 @@
         padding: 1em 0;
         user-select: none;
         border-radius: 1.5em;
+        margin-inline: 0.25em;
         transition: background-color 0.15s ease-in-out, border-inline 0.15s ease-in-out;
     
         &:hover{
@@ -62,6 +63,7 @@
         .menu-button{
             display: flex;
             padding: 1rem 2rem;
+            margin: 0 .4rem;
             font-size: 2rem;
             &:hover{
                 cursor: pointer;
