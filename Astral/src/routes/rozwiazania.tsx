@@ -1,5 +1,5 @@
 import Imiona from "../Components/BazaImion"
-
+import podwozie1 from "../../../../podwozie1.png"
 export default function Rozwiazania() {
   return (
     <>
@@ -10,6 +10,7 @@ export default function Rozwiazania() {
       </p>
       <ul className="list-disc list-inside">
         <li>konstrukcji: aluminiowych profili konstrukcyjnych, opracowanych i w części gotowych elementów montażowych w technologii druku 3D</li>
+        <image src={podwozie1} alt="podwozie1" />
       </ul>
     </div>
     </>
