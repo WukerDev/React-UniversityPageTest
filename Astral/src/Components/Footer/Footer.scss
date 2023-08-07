@@ -1,8 +1,15 @@
-.foot_color{ 
-    img{ //stosowany tylko na obrazach w footerze
-      filter: invert(73%) sepia(7%) saturate(480%) hue-rotate(179deg) brightness(89%) contrast(86%);
-      //Zmiana koloru na biały
-    }
+.site-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  main{
+    flex: 1;
   }
 
- 
+  footer{
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    padding: 1rem 0;
+  }
+}
