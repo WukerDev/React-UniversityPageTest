@@ -7,7 +7,7 @@ let Imiona = [
     },
     {
         "id": 2,
-        "imie": "Wiktor",
+        "imie": "ĄĄĄĄĄĄĄĄĄĄĄĄĄĄĄ",
         "info": "Wiktor jest najgorszy x2",
         "wiek": 20
     },
