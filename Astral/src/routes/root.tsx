@@ -13,7 +13,7 @@ export default function Root() {
   });
     return (
         <>
-        <div className="flex flex-col justify-between min-h-screen dark:bg-black">
+        <div className="flex flex-col justify-between min-h-screen site-contaianer">
             {/*<Test />*/}
             <NewNav />
                 <Outlet />
