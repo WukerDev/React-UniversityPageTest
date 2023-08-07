@@ -10,7 +10,7 @@ export default function Rozwiazania() {
       </p>
       <ul className="list-disc list-inside">
         <li>konstrukcji: aluminiowych profili konstrukcyjnych, opracowanych i w części gotowych elementów montażowych w technologii druku 3D</li>
-        <img src={podwozie1} alt="podwozie1" />
+        <img src={podwozie1} alt="podwozie1" draggable="false"/>
       </ul>
     </div>
     </>
