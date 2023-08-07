@@ -1,0 +1,40 @@
+.newnavbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+
+    .logo{
+        img{
+            width: 4rem;
+            height: auto;
+        }
+    }
+
+    .spacer{
+        display: flex;
+        flex-grow: 1;
+        align-items: center;
+
+        padding-inline: 1rem;
+    }
+
+    .card{
+        width: calc((100% / 3) - 40px);
+        padding: 1em 0;
+        user-select: none;
+        border-radius: 1.5em;
+        transition: background-color 0.15s ease-in-out;
+    
+        &:hover{
+            background-color: #e9ecef;
+            cursor: pointer;
+        }
+    
+        h2{
+            margin-top: 0;
+        }
+    }
+}
+

@@ -1,6 +1,7 @@
 import Test from '../Components/Nav/Nav'
 import Footer from '../Components/Footer/Footer'
 import Imiona from '../Components/BazaImion'
+import NewNav from '../Components/Nav/Newnav/NewNav'
 import { useEffect, useState } from 'react'
 import { Outlet, Link } from 'react-router-dom';
 
@@ -13,7 +14,8 @@ export default function Root() {
     return (
         <>
         <div className="flex flex-col justify-between min-h-screen dark:bg-black">
-            <Test />
+            {/*<Test />*/}
+            <NewNav />
                 <Outlet />
             <Footer />
         </div>
