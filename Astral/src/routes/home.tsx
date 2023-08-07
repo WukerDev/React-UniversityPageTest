@@ -1,10 +1,13 @@
 import Imiona from "../Components/BazaImion"
+import orzel from '../../public/1.png'
+import logo from '../../public/2.png'
 
 export default function Home() {
   return (
     <>
        <div className="p-10">
-   
+      <img src={orzel} className="w-1/2 mx-auto" />
+      <img src={logo} className="w-1/2 mx-auto" />
       <p className="text-xl mt-10 mb-4">
         Projekt: „Innowacyjny, mobilny system dezynfekcji sal dydaktycznych”
       </p>
