@@ -3,7 +3,7 @@ import Footer from '../Components/Footer/Footer'
 import Imiona from '../Components/BazaImion'
 import NewNav from '../Components/Nav/Newnav/NewNav'
 import { useEffect, useState } from 'react'
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 export default function Root() {
   const [count, setCount] = useState(0);

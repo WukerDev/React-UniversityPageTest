@@ -1,15 +1,8 @@
-.site-container{
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-
-  main{
-    flex: 1;
-  }
-
-  footer{
+footer{
     background-color: #f8f9fa;
-    border-top: 1px solid #e9ecef;
-    padding: 1rem 0;
-  }
+    padding: 2rem 0;
+    p{
+      font-weight: 500;
+      color: #6c757d;
+    }
 }

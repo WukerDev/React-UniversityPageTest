@@ -4,7 +4,9 @@
     align-items: center;
     background-color: #f8f9fa;
     border-bottom: 1px solid #e9ecef;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     .menu-button{
         display: none;
         order: 2;
@@ -15,6 +17,11 @@
         img{
             width: 3rem;
             height: auto;
+            transition: transform 0.20s ease-in-out;
+            &:hover{
+                cursor: pointer;
+                transform: rotateZ(5deg) scale(1.1);
+            }
         }
     }
 
@@ -32,11 +39,13 @@
         padding: 1em 0;
         user-select: none;
         border-radius: 1.5em;
-        transition: background-color 0.15s ease-in-out;
+        transition: background-color 0.15s ease-in-out, border-inline 0.15s ease-in-out;
     
         &:hover{
             background-color: #e9ecef;
             cursor: pointer;
+
+            border-inline: 4px solid #e9e6e6;
         }
     
         h2{

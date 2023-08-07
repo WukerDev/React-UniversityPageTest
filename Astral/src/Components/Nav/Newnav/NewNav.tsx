@@ -16,7 +16,9 @@ const Card: React.FC<CardProps> = ({ title, where }) => (
 
 const Logo: React.FC = () => (
     <div className="logo">
-        <img src={logo} alt="UKW Logo"/>
+        <a href="https://www.ukw.edu.pl/" target='_blank'>
+            <img src={logo} alt="UKW Logo"/>
+        </a>
     </div>
 );
 
