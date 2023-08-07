@@ -13,7 +13,7 @@ export default function Rozwiazania() {
       <p className="text-xl mb-4">
         Poprzez prace studentów oraz kadry koła naukowego Inkubator Technologiczny UKW, opracowano platformę mobilną, o napędzie elektrycznym, która zdolna jest do przenoszenia systemu dezynfekcji. Opracowane rozwiązanie zostało skonstruowane z wykorzystaniem niżej opisanych rozwiązań. W zakresie:
       </p>
-      <ul className="list-disc list-inside justify-center">
+      <ul className="list-disc list-inside justify-center flex-col flex">
         <li>konstrukcji: aluminiowych profili konstrukcyjnych, opracowanych i w części gotowych elementów montażowych w technologii druku 3D</li>
         <img src={podwozie1} alt="podwozie1" className="justify-center" />
         <img src={podwozie2} alt="podwozie2" />
