@@ -16,12 +16,6 @@ let Imiona = [
         "imie": "Ulyana",
         "info": "Ulyana jest najlepsza",
         "wiek": 19
-    },
-    {
-        "id": 4,
-        "imie": "Błażej",
-        "info": "Błażej lubi kebaby na cienkim",
-        "wiek": 21
-    },
+    }
 ]
 export default Imiona
