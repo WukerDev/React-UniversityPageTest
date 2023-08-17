@@ -22,15 +22,38 @@ export default function Cele() {
       <p className="text-xl mb-4">Wybrane cel szczegółowe:</p>
       <ul className="list-disc list-inside">
         <li>Konstrukcja programowalnej, mobilnej platformy kołowej do dezynfekcji pomieszczeń</li>
-        <img src={cele1} alt="cele1" />
-        <img src={cele2} alt="cele2" />
+        <div className="galeria-zdjec">
+          <div className="obrazek-container">
+            <img src={cele1} alt="cele1" />
+            <p>Podwozie</p>
+          </div>
+          <div className="obrazek-container">
+            <img src={cele2} alt="cele2" />
+            <p>Przekładnia</p>
+          </div>
+          
+        </div>
 
         <li>Opracowanie systemu liczenia osób wchodzących do pomieszczenia oraz korelacja tej ilości z użyciem dozownika płynu dezynfekującego</li>
-        <img src={cele3} alt="cele3" />
-        <img src={cele4} alt="cele4" />
+        
+        <div className="galeria-zdjec">
+          <div className="obrazek-container">
+              <img src={cele3} alt="cele3" />
+              <p>Licznik osób 1</p>
+          </div>
+          <div className="obrazek-container">
+              <img src={cele4} alt="cele4" />
+              <p>Licznik osób 2</p>
+          </div>
+        </div>
         <li>Opracowanie systemu informatycznego</li>
-        <img src={cele5} alt="cele5" />
-
+        
+        <div className="galeria-zdjec">
+          <div className="obrazek-container">
+          <img src={cele5} alt="cele5" />
+              <p>Przekładnia</p>
+          </div>
+        </div>
       </ul>
 
     
