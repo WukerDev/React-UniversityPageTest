@@ -1,3 +1,19 @@
+.active{
+    font-weight: bold;
+}
+.overlay-nav_{
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, 0.5);
+    @media screen and (min-width: 768px){
+        display: none;
+    }
+}
 .newnavbar{
     display: flex;
     justify-content: space-between;
@@ -5,8 +21,8 @@
     background-color: #f8f9fa;
     border-bottom: 1px solid #e9ecef;
     position: sticky;
+    z-index: 1002;
     top: 0;
-    z-index: 1000;
     .menu-button{
         display: none;
         order: 2;
@@ -96,4 +112,3 @@
         }
     }
 }
-

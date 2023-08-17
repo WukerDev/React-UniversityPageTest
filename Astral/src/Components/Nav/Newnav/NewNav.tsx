@@ -1,17 +1,25 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './NewNav.scss'
 import logo from '/ukw.svg'
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 type CardProps = {
     title: string;
     where?: string;
+    onLinkClick?: () => void;
 };
 
-const Card: React.FC<CardProps> = ({ title, where }) => (
-    <Link className='card' to={"/"+where}>
+const isMobile = () => window.innerWidth <= 768;
+
+const Card: React.FC<CardProps> = ({ title, where, onLinkClick }) => (
+    <NavLink 
+    onClick={onLinkClick}
+    className={
+        ({isActive, isPending}) => `card ${isPending ? "pending": isActive ? "active" : ""}`
+    }
+    to={"/"+where}>
         {title}
-    </Link>
+    </NavLink>
 );
 
 const Logo: React.FC = () => (
@@ -54,25 +62,35 @@ const NewNavbar: React.FC = () => {
         };
     }, [menuOpen]);
     
+    const handleLinkClick = () => {
+        if (isMobile()) {
+            setMenuOpen(false);
+        }
+    };
+
     const toggleMenu = () => {
         setMenuOpen(prevState => !prevState);
     };
 
     return (
-    <nav className="newnavbar">
+        <>
+        <nav className="newnavbar">
         <Logo />
         <button className="menu-button" onClick={toggleMenu} ref={hamburgerRef}>
             ☰
         </button>
+
         {menuOpen && (
         <div className={`spacer ${menuOpen ? 'open' : ''}`} ref={navRef} >
-            <Card title="Strona główna" where=""/>
-            <Card title="Zespół" where="Zespol" />
-            <Card title="Cele projektowe" where="Cele" />
-            <Card title="Opracowane rozwiązania" where="Rozwiazania" />
+            <Card title="Strona główna" where="" onLinkClick={handleLinkClick}/>
+            <Card title="Zespół" where="Zespol" onLinkClick={handleLinkClick}/>
+            <Card title="Cele projektowe" where="Cele" onLinkClick={handleLinkClick}/>
+            <Card title="Opracowane rozwiązania" where="Rozwiazania" onLinkClick={handleLinkClick}/>
         </div>
         )}
     </nav>
+    {menuOpen && <div className="overlay-nav_" onClick={toggleMenu} />}
+    </>
     );
 };
 

@@ -12,51 +12,51 @@ import './Content.scss'
 export default function Cele() {
   return (
     <>
-    <div className="p-10">
-
-
+    <div className="">
       <h1 className="text-4xl font-bold mt-10 mb-4">Cele projektu</h1>
-      <p className="text-xl mb-4">
+      <p className="text-xl mb-4 mx-4 text-justify">
         Głównym celem projektu było opracowanie na drodze prac badawczo rozwojowych skutecznej i taniej metody wspomagania dezynfekcji sal dydaktycznych oraz systemu dezynfekcji rąk przed wejściem do sali na zajęcia.
       </p>
-      <p className="text-xl mb-4">Wybrane cel szczegółowe:</p>
-      <ul className="list-disc list-inside">
-        <li>Konstrukcja programowalnej, mobilnej platformy kołowej do dezynfekcji pomieszczeń</li>
-        <div className="galeria-zdjec">
-          <div className="obrazek-container">
-            <img src={cele1} alt="cele1" />
-            <p>Podwozie</p>
-          </div>
-          <div className="obrazek-container">
-            <img src={cele2} alt="cele2" />
-            <p>Przekładnia</p>
-          </div>
-          
-        </div>
-
-        <li>Opracowanie systemu liczenia osób wchodzących do pomieszczenia oraz korelacja tej ilości z użyciem dozownika płynu dezynfekującego</li>
-        
-        <div className="galeria-zdjec">
-          <div className="obrazek-container">
-              <img src={cele3} alt="cele3" />
-              <p>Licznik osób 1</p>
-          </div>
-          <div className="obrazek-container">
-              <img src={cele4} alt="cele4" />
-              <p>Licznik osób 2</p>
-          </div>
-        </div>
-        <li>Opracowanie systemu informatycznego</li>
-        
-        <div className="galeria-zdjec">
-          <div className="obrazek-container">
-          <img src={cele5} alt="cele5" />
+      <p className="text-xl my-8">Wybrane cele szczegółowe:</p>
+      <div className="articles-container">
+        <div className="article">
+        <p className='article-title'>Konstrukcja programowalnej, mobilnej platformy kołowej do dezynfekcji pomieszczeń</p>
+          <div className="galeria-zdjec mb-3">
+            <div className="obrazek-container">
+              <img src={cele1} alt="cele1" />
+              <p>Podwozie</p>
+            </div>
+            <div className="obrazek-container">
+              <img src={cele2} alt="cele2" />
               <p>Przekładnia</p>
+            </div>
           </div>
         </div>
-      </ul>
 
-    
+        <div className="article">
+          <p className='article-title'>Opracowanie systemu liczenia osób wchodzących do pomieszczenia oraz korelacja tej ilości z użyciem dozownika płynu dezynfekującego</p>
+          <div className="galeria-zdjec mb-3">
+            <div className="obrazek-container">
+                <img src={cele3} alt="cele3" />
+                <p className='add-padding'>Licznik osób 1</p>
+            </div>
+            <div className="obrazek-container">
+                <img src={cele4} alt="cele4" />
+                <p className='add-padding'>Licznik osób 2</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="article">
+          <p className='article-title'>Opracowanie systemu informatycznego</p>
+          <div className="galeria-zdjec mb-3">
+            <div className="obrazek-container">
+            <img src={cele5} alt="cele5" />
+                <p>Przekładnia</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     </>
   )

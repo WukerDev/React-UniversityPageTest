@@ -72,8 +72,24 @@ ul{
 
 }
 
-.galeria-zdjec{
+.articles-container{
+    .article:nth-child(odd){
+        background-color: #eeeeee8e;
+    }
+    .article{
+        padding: 1em;
+    }
+    p.article-title{
+        font-size: 1.3em;
+        font-weight: normal;
+        margin: 0 0 .7em 0;
+        padding: 0 0.5em;
+        text-align: justify;
+        border-left: 3px solid #333;
+    }
+}
 
+.galeria-zdjec{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,6 +103,10 @@ ul{
         &:hover{
             cursor: zoom-in;
         }
+        @media screen and (max-width: 768px){
+            height: auto;
+            max-height: 8rem;
+        }
     }
     .obrazek-container{
         display: flex;
@@ -96,10 +116,13 @@ ul{
         background-color: #ffffff;
         box-shadow: 0 0 0.3em rgba(0,0,0,0.2);
         color: #333;
-        margin: .2em;
+        margin: .4em;
         border-radius: 1em 1em 1em 1em;
         p{
             padding: 1em 0;
+        }
+        p.add-padding{
+            padding: 1em 2em;
         }
     }
 }
