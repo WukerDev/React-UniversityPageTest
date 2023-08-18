@@ -72,6 +72,37 @@ ul{
 
 }
 
+.zespol-info{
+    text-align: left;
+    border-left: 3px solid #333;
+    padding: 0 0.5em;
+    .kolo-nazwa{
+        color: #000;
+        font-weight: 600;
+    }
+}
+
+.zespol-main{
+    padding: 5em;
+    @media screen and (max-width: 768px){
+        padding: 1em;
+    }
+    .wrapped-iframe{
+        position: relative;
+        overflow: hidden;
+        padding-top: 56.25%;
+
+        box-shadow: 0 0 0.7em rgba(0,0,0,0.3);
+    }
+    iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
 .articles-container{
     .article:nth-child(odd){
         background-color: #eeeeee8e;
@@ -84,7 +115,7 @@ ul{
         font-weight: normal;
         margin: 0 0 .7em 0;
         padding: 0 0.5em;
-        text-align: justify;
+        text-align: left;
         border-left: 3px solid #333;
     }
 }
@@ -103,9 +134,18 @@ ul{
         &:hover{
             cursor: zoom-in;
         }
-        @media screen and (max-width: 768px){
-            height: auto;
-            max-height: 8rem;
+        &.big{
+            height: 16rem;
+        }
+        @media screen and (max-width: 768px){   
+            &.big{
+                height: auto;
+                max-height: 16rem;
+            }
+            &.small{
+                height: auto;
+                max-height: 12rem;
+            }
         }
     }
     .obrazek-container{
@@ -118,6 +158,9 @@ ul{
         color: #333;
         margin: .4em;
         border-radius: 1em 1em 1em 1em;
+        @media screen and (max-width: 768px){
+            
+        }
         p{
             padding: 1em 0;
         }

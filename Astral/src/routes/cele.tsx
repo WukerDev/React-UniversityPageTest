@@ -23,11 +23,11 @@ export default function Cele() {
         <p className='article-title'>Konstrukcja programowalnej, mobilnej platformy kołowej do dezynfekcji pomieszczeń</p>
           <div className="galeria-zdjec mb-3">
             <div className="obrazek-container">
-              <img src={cele1} alt="cele1" />
+              <img src={cele1} alt="cele1" className='small'/>
               <p>Podwozie</p>
             </div>
             <div className="obrazek-container">
-              <img src={cele2} alt="cele2" />
+              <img src={cele2} alt="cele2" className='small'/>
               <p>Przekładnia</p>
             </div>
           </div>
@@ -37,11 +37,11 @@ export default function Cele() {
           <p className='article-title'>Opracowanie systemu liczenia osób wchodzących do pomieszczenia oraz korelacja tej ilości z użyciem dozownika płynu dezynfekującego</p>
           <div className="galeria-zdjec mb-3">
             <div className="obrazek-container">
-                <img src={cele3} alt="cele3" />
+                <img src={cele3} alt="cele3" className='small'/>
                 <p className='add-padding'>Licznik osób 1</p>
             </div>
             <div className="obrazek-container">
-                <img src={cele4} alt="cele4" />
+                <img src={cele4} alt="cele4" className='small'/>
                 <p className='add-padding'>Licznik osób 2</p>
             </div>
           </div>
@@ -51,7 +51,7 @@ export default function Cele() {
           <p className='article-title'>Opracowanie systemu informatycznego</p>
           <div className="galeria-zdjec mb-3">
             <div className="obrazek-container">
-            <img src={cele5} alt="cele5" />
+            <img src={cele5} alt="cele5" className='big'/>
                 <p>Przekładnia</p>
             </div>
           </div>
