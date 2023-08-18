@@ -42,9 +42,9 @@ export default function Rozwiazania() {
           </div>
         </div>
         <div className="article">
-          <p className="article-title">sterowania i komunikacji: modułów ESP8266 lub wymiennie Arduino Mega, wraz z oprogramowanie dla systemu Windows i modułów Arduino,</p>
-          <p className="article-title">zasilania: modelarskie pakietu zasilania (litowo polimerowe lub niklowo-metalowo-wodorkowe),</p>
-          <p className="article-title">mobilny regał z systemem ozonowania, własnym systemem zasilania i rozwiązanie w zakresie liczenia osób.</p>
+          <p className="article-title">Sterowania i komunikacji: modułów ESP8266 lub wymiennie Arduino Mega, wraz z oprogramowanie dla systemu Windows i modułów Arduino,</p>
+          <p className="article-title">Zasilania: modelarskie pakietu zasilania (litowo polimerowe lub niklowo-metalowo-wodorkowe),</p>
+          <p className="article-title">Mobilny regał z systemem ozonowania, własnym systemem zasilania i rozwiązanie w zakresie liczenia osób.</p>
           <div className="galeria-zdjec mb-3">
             <div className="obrazek-container">
               <img src={regal} alt="regal" className='big'/>

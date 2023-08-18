@@ -25,25 +25,28 @@ ul{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    img{
-        width: 33vw;
-        height: auto;
+    img:nth-child(1){
         margin: .2em;
         border-radius: 0.5em;
+        height: 10rem;
+        width: auto;
+    }
+    img:nth-child(2){
+        margin: .2em;
+        border-radius: 0.5em;
+        height: 7rem;
+        width: auto;
     }
     @media screen and (max-width: 768px){
-        img{
-            width: 40vw;
-            align-self: center;
+        img:nth-child(1){
+            width: 20rem;
+            height: auto;
+        }
+        img:nth-child(2){
+            width: 18rem;
+            height: auto;
         }
     }
-    @media screen and (max-width: 463px){
-        img{
-            width: 60vw;
-            align-self: center;
-        }
-    }
-
 }
 
 .small-gallery{
